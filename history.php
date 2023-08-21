@@ -15,11 +15,13 @@ if (isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true) {
         <div class="entries-list">
 
             <?php
+
             $sql = 'SELECT *, (sleep_value + sadness_value + anxiety_value + pleasure_value + desire_value + appetite_value + memory_value + focussing_value) / 8  AS average FROM mood_entry ORDER BY created_at DESC';
             $result = mysqli_query($conn, $sql);
 
             //Fetch the resulting row as an array 
             $entries = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
             foreach ($entries as $entry) {
                 $values = [
                     'focussing' => 'Focussing',
@@ -37,9 +39,11 @@ if (isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true) {
                 $idConnectedUser = $_SESSION['USER_ID'];
                 $creator = 'created_by';
                 $average = 'average';
+             
 
-                if ($entry[$creator] === $idConnectedUser) {
-            ?>
+                if ($entry[$creator] == $idConnectedUser) {
+         
+                ?>
                     <div class="row mood-entry">
                         <form class="delete-btn" action="add.php" method="POST">
                             <input type='hidden' name='id_to_delete' value='<?php echo $entry[$id] ?>'>

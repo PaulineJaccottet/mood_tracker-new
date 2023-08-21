@@ -21,28 +21,34 @@ include('templates/header-page.php');
 
     if (isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true) {
 
-    // ----------------------User connected-------------------- //
-        ?>
+        // ----------------------User connected-------------------- //
+    ?>
         <div class="connected-user">
-            <div class="user-infos">
-                <h3>Your Informations</h3>
-                <p><?php echo $_SESSION['USER_NAME'] ?></p>
-                <p><?php echo $_SESSION['USER_EMAIL'] ?></p>
+            <h1>Account</h1>
+            <div class="connected-user-inner">
+                <div class="user-infos">
+                    <h3>Your Informations</h3>
+                    <p><strong>user: </strong> <?php echo $_SESSION['USER_NAME'] ?></p>
+                    <p><strong>email: </strong><?php echo $_SESSION['USER_EMAIL'] ?></p>
+                </div>
+                <div class="symptoms-tracking">
+                    <h3>comming soon</h3>
+                    <p>A repertory of your yellow and orange symptoms</p>
+                </div>
             </div>
 
-            <div class="tracking-infos">
-                <h3>Your Tracking record</h3>
-                <p>to be added</p>
-                <a class="cta-btn" href="history.php"> history</a>
-                <a class="cta-btn" href="mood-form.php">Track your mood</a>
-            </div>
+
+            <!-- <div class="tracking-infos">
+                <a class="cta-btn btn" href="history.php"> history</a>
+                <a class="cta-btn btn" href="mood-form.php">Track your mood</a>
+            </div> -->
         </div>
 
-        <?php
+    <?php
 
     } else {
 
-    // ----------------------No user connected-------------------- //
+        // ----------------------No user connected-------------------- //
 
     ?>
         <div class="registration-box">

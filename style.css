@@ -396,14 +396,18 @@ h1 {
     margin-bottom: 15px;
 }
 
-.user-section {
-    display: flex;
-    justify-content: space-around;
-}
-
 .user-form {
     display: flex;
     flex-direction: column;
+}
+
+/* -------------------------------------------- */
+/* ------------------ACCOUNT------------------- */
+/* -------------------------------------------- */
+
+.connected-user-inner {
+    display: flex;
+    justify-content: space-around;
 }
 
 
