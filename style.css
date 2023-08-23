@@ -14,10 +14,12 @@ Display rates : https://www.youtube.com/watch?v=EoN_4fv3T7A
 /* ------------------------------------------- */
 
 body {
+    position: relative;
     font-family: 'Montserrat', sans-serif;
     background-color: #DAC0A3;
-    min-height: 100vh;
+    min-height: 84.6vh;
     margin: 0;
+    padding-bottom: 150px;
 }
 
 section {
@@ -37,6 +39,7 @@ h1 {
     font-size: 40px;
     text-align: center;
     font-family: 'Permanent Marker';
+    margin-bottom: 50px;
 }
 
 .btn {
@@ -281,11 +284,12 @@ h1 {
     cursor: pointer;
 }
 
-.category-note .open {
+.category-note {
     display: block;
+    transition: display 3s ease-in-out;
 }
 
-.category-note {
+.close{
     display: none;
 }
 
@@ -414,6 +418,13 @@ h1 {
 /* ------------------------------------------- */
 /* ------------------FOOTER------------------- */
 /* ------------------------------------------- */
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin-top: 30px;
+}
 
 .footer {
     background-color: #884A39;

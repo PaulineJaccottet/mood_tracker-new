@@ -67,7 +67,7 @@ if (isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true) {
 
                                         <div class="category-content">
                                             <div class="click-btn">+</div>
-                                            <p class="category-note"><?= htmlspecialchars($entry[$name . '_note']) ?></p>
+                                            <p class="category-note close"><?= htmlspecialchars($entry[$name . '_note']) ?></p>
                                         </div>
                                     <?php
                                     } ?>
